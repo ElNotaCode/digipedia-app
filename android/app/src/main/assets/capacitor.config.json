@@ -1,0 +1,6 @@
+{
+	"appId": "com.digimonpedia",
+	"appName": "Digipedia",
+	"webDir": "dist/digipedia-app",
+	"bundledWebRuntime": false
+}
