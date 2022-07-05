@@ -1,3 +1,5 @@
+![imagen](https://user-images.githubusercontent.com/19403472/177314278-a256d0fb-7299-4957-95d8-21fce88b4c8f.png)
+
 # DigipediaApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
