@@ -1,0 +1,7 @@
+<div class="container">
+  <!--por cada digimon va a crear una carta, a la cual le pasamos los datos de este-->
+  <app-digimon-card
+    *ngFor="let digimon of digimons"
+    [digimon]="digimon"
+  ></app-digimon-card>
+</div>
