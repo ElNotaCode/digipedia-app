@@ -29,4 +29,8 @@ export class DigimonService {
   }
 
   //get by level
+  //función del tipo obsevable que va a hacer get by name, le pasamos una string por parametro
+  getDigimonByLevel(level: string): Observable<any> {
+    return this.httpClient.get(`${URL}/level/${level}`);
+  }
 }
