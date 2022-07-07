@@ -46,7 +46,10 @@
           placeholder="Search Digimon by name or level"
           aria-label="Search"
         />
-        <button class="btn btn-outline-warning" (click)="buscarDigimon()">
+        <button
+          class="btn btn-outline-warning"
+          routerLink="digimon-search/{{ search }}"
+        >
           Search
         </button>
       </div>

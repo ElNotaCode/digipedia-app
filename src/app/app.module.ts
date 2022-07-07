@@ -9,6 +9,7 @@ import { DigimonCardComponent } from './components/digimon-card/digimon-card.com
 import { DigimonListComponent } from './components/digimon-list/digimon-list.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
+import { DigimonSearchComponent } from './components/digimon-search/digimon-search.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HomeComponent } from './components/home/home.component';
     DigimonListComponent,
     NavbarComponent,
     HomeComponent,
+    DigimonSearchComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
