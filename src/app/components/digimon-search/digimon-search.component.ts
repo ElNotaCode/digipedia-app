@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { DigimonService } from 'src/app/_services/digimon.service';
 
 @Component({
   selector: 'app-digimon-search',
@@ -7,11 +8,20 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./digimon-search.component.css'],
 })
 export class DigimonSearchComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {
-    this.route.params.subscribe((params) => console.log(params));
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private digimonService: DigimonService
+  ) {
+    this.route.params.subscribe((params) => (this.search = params['search']));
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.buscarDigimon();
+  }
+
+  search: string = '';
 
   levels: string[] = [
     'Fresh',
@@ -23,7 +33,7 @@ export class DigimonSearchComponent implements OnInit {
     'Armor',
   ];
 
-  search: string = '';
+  digimons: any = '';
 
   buscarDigimon() {
     let searchStr = this.tratarDatos();
@@ -31,12 +41,18 @@ export class DigimonSearchComponent implements OnInit {
     let esLevel = this.comprobarNivel(searchStr);
     console.log(esLevel);
 
-    //reseteamos la variable search
-    this.search = '';
-
     //Hacer peti correspondiente
     if (esLevel) {
+      //buscaremos por nivel
+      this.digimonService
+        .getDigimonByLevel(searchStr)
+        .subscribe((result) => (this.digimons = result));
     } else {
+      //buscaremos por nombre
+      this.digimonService
+        .getDigimonByName(searchStr)
+        .subscribe((result) => (this.digimons = result));
+      console.log(this.digimons);
     }
   }
 

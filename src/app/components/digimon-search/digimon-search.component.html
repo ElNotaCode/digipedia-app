@@ -1,1 +1,6 @@
-<p>digimon-search works!</p>
+<div class="container">
+  <!--por cada digimon va a crear una carta, a la cual le pasamos los datos de este-->
+  <div *ngFor="let digimon of digimons" class="d-flex justify-content-center">
+    <app-digimon-card [digimon]="digimon"></app-digimon-card>
+  </div>
+</div>
