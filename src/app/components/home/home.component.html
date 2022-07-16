@@ -1,11 +1,9 @@
 <div class="container">
   <div class="d-flex justify-content-center">
-    <p class="text-justify">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas similique
-      delectus suscipit sed error voluptatem omnis, rem accusamus. Repellat
-      molestiae vero laboriosam architecto unde aliquid, sed doloribus iste
-      maiores! Ea?
-    </p>
+    <p class="text-justify">Become a Digimon expert with Digipedia!</p>
+  </div>
+  <div *ngFor="let digimon of digimons" class="d-flex justify-content-center">
+    <app-digimon-card [digimon]="digimon"></app-digimon-card>
   </div>
   <div class="d-flex justify-content-center">
     <button type="button" class="btn btn-warning" routerLink="/digimon-list">

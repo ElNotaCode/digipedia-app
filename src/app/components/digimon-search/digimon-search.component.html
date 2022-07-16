@@ -3,4 +3,17 @@
   <div *ngFor="let digimon of digimons" class="d-flex justify-content-center">
     <app-digimon-card [digimon]="digimon"></app-digimon-card>
   </div>
+  <div *ngIf="!digimons" class="card">
+    <img
+      src="https://digimon.shadowsmith.com/img/bakemon.jpg"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">
+        <strong>Unknown Digimon</strong>
+      </h5>
+      <p class="card-text">Level: Unknown</p>
+    </div>
+  </div>
 </div>

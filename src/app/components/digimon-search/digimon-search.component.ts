@@ -52,7 +52,6 @@ export class DigimonSearchComponent implements OnInit {
       this.digimonService
         .getDigimonByName(searchStr)
         .subscribe((result) => (this.digimons = result));
-      console.log(this.digimons);
     }
   }
 

@@ -2,7 +2,9 @@
 <div *ngIf="digimon" class="card">
   <img src="{{ digimon.img }}" class="card-img-top" alt="..." />
   <div class="card-body">
-    <h5 class="card-title">{{ digimon.name }}</h5>
+    <h5 class="card-title">
+      <strong>{{ digimon.name }}</strong>
+    </h5>
     <p class="card-text">Level: {{ digimon.level }}</p>
   </div>
 </div>
