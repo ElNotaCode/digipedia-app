@@ -1,29 +1,18 @@
 ![imagen](https://user-images.githubusercontent.com/19403472/177314278-a256d0fb-7299-4957-95d8-21fce88b4c8f.png)
 
-# DigipediaApp
+# DigipediaApp [ESP]
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
+Este proyecto ha sido generado con [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
 
-## Development server
+![image](https://user-images.githubusercontent.com/19403472/182117453-7b2799a6-4263-41d3-a226-ccc08d304cfe.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Descripción general
 
-## Code scaffolding
+Digipedia es una aplicación de utiliza [Angular](https://github.com/angular/angular-cli) y [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/). ¿Como un proyecto desarrollado con lenguajes y tecnologías web puede ser una aplicación descargable desde google play? Con [Capacitor](https://capacitorjs.com/solution/angular), que es un cross-platform native runtime, podemos builder nuestro proyecto y llevarlo a Android Studio.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![image](https://user-images.githubusercontent.com/19403472/182117574-728afd2b-a245-4254-b212-f47d9812aa29.png)
 
-## Build
+## Publicación de la App
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+La aplicación se ha publicado en la Play Store, puedes verla desde este link: 
+[https://play.google.com/store/apps/details?id=com.digimonpedia](https://play.google.com/store/apps/details?id=com.digimonpedia)
