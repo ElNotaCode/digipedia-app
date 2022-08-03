@@ -1,6 +1,11 @@
-<div class="container">
-  <!--por cada digimon va a crear una carta, a la cual le pasamos los datos de este-->
-  <div *ngFor="let digimon of digimons" class="d-flex justify-content-center">
+<div class="row">
+  <div class="col-xs-12">
+    <app-search-form></app-search-form>
+  </div>
+</div>
+<div class="row" *ngFor="let digimon of digimons">
+  <div class="col-xs-12">
+    <!--por cada digimon va a crear una carta, a la cual le pasamos los datos de este-->
     <app-digimon-card [digimon]="digimon"></app-digimon-card>
   </div>
 </div>

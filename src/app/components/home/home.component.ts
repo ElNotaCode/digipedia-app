@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { DigimonService } from 'src/app/_services/digimon.service';
+import { DigimonService } from 'src/app/services/digimon.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
   //declaramos el servicio
@@ -18,6 +17,10 @@ export class HomeComponent implements OnInit {
     //asignaremos el resultado a la variable que hemos declarado antes
     this.digimonService
       .getDigimonByName('Agumon')
-      .subscribe((result) => (this.digimons = result));
+      .subscribe(
+        (responseData) => (
+          (this.digimons = responseData), console.log(this.digimons)
+        )
+      );
   }
 }
