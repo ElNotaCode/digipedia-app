@@ -1,10 +1,10 @@
 <div class="row">
-  <div class="col-xs-12">
+  <div class="col-xs-12 text-center">
     <p class="text-justify">Become a Digimon expert with Digipedia!</p>
   </div>
 </div>
 <div class="row" *ngFor="let digimon of digimons">
-  <div class="col-xs-12">
+  <div class="col-xs-12 d-flex justify-content-center">
     <app-digimon-card [digimon]="digimon"></app-digimon-card>
   </div>
 </div>

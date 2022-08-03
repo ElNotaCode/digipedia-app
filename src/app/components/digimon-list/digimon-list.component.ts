@@ -15,6 +15,7 @@ export class DigimonListComponent implements OnInit {
 
   //declaramos la variable tipo any donde guardaremos los digimons
   digimons: any = null;
+  search = '';
 
   //al iniciarse el componente hace la petición
   ngOnInit(): void {
