@@ -1,22 +1,21 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { Digimon } from '../models/digimon';
 
 @Pipe({
   name: 'searchDigimon',
 })
 export class SearchDigimonPipe implements PipeTransform {
-  transform(value: any, searchedName: String, digimonName: string): any {
-    if (value.lenth == 0) {
-      return value;
+  transform(digimonArray: Digimon[], search: string) {
+    //miramos si se ha insertado valor
+    if (search) {
+      return digimonArray.filter((digimon) => {
+        return (
+          digimon.name.toLowerCase().includes(search.toLowerCase()) ||
+          digimon.level.toLowerCase().includes(search.toLowerCase())
+        );
+      });
     }
-    //declaramos el array de resultados
-    const resultArray = [];
-    //recorremos los digimon (value)
-    for (const item of value) {
-      if (item[digimonName] === searchedName) {
-        //si el nombre buscado (searchedName) coincide con el nombre actual de item
-        resultArray.push(item);
-      }
-      return resultArray;
-    }
+
+    return digimonArray;
   }
 }

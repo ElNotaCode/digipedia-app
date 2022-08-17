@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Digimon } from 'src/app/models/digimon';
 import { DigimonService } from 'src/app/services/digimon.service';
 
 /**
@@ -14,7 +15,7 @@ export class DigimonListComponent implements OnInit {
   constructor(private digimonService: DigimonService) {}
 
   //declaramos la variable tipo any donde guardaremos los digimons
-  digimons: any = null;
+  digimons: Digimon[] = [];
   search = '';
 
   //al iniciarse el componente hace la petición

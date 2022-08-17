@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { DigimonListComponent } from './components/digimon-list/digimon-list.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
-import { SearchFormComponent } from './components/shared/search-form/search-form.component';
 import { DigimonCardComponent } from './components/shared/digimon-card/digimon-card.component';
 import { SearchDigimonPipe } from './pipes/search-digimon.pipe';
 
@@ -18,7 +17,6 @@ import { SearchDigimonPipe } from './pipes/search-digimon.pipe';
     DigimonListComponent,
     NavbarComponent,
     HomeComponent,
-    SearchFormComponent,
     DigimonCardComponent,
     SearchDigimonPipe,
   ],

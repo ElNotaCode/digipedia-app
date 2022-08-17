@@ -1,4 +1,15 @@
-<div class="row" *ngFor="let digimon of digimons">
+<div class="row">
+  <div class="col-xs-12 d-flex justify-content-center">
+    <input
+      class="form-control"
+      type="search"
+      name="search"
+      placeholder="Search Digimon by name or level"
+      [(ngModel)]="search"
+    />
+  </div>
+</div>
+<div class="row" *ngFor="let digimon of digimons | searchDigimon: search">
   <div class="col-xs-12 d-flex justify-content-center">
     <!--por cada digimon va a crear una carta, a la cual le pasamos los datos de este-->
     <app-digimon-card [digimon]="digimon"></app-digimon-card>
